@@ -1,0 +1,294 @@
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+.outsideLine{
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 1px;
+    background-color: #C0C0C0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+/* Products */
+.products {
+    background-color: #F8F8F8;
+    min-height: 1000px;
+    margin-left: 265px;
+    margin-right: 265px;
+}
+.product {
+    max-height: 500px;
+    min-height: 500px;
+    margin-left: 15px;
+    margin-right: 10px;
+    padding-right: 10px;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display:inline-block;
+    margin-bottom: 15px;
+}
+
+.product .splitter{
+    width: 498px;
+    height: 1px;
+    background-color: #C0C0C0;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.2);
+}
+
+.productTitle{
+    margin-top: 12px;
+    padding-top: 10px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.fas{
+    padding-left: 5px;
+    font-size: 23px;
+}
+.productInfoFont{
+    font-size: 14px;
+}
+.vintage{
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 50px;
+
+}
+.origin{
+    font-weight: 600;
+    font-size: 14px;
+}
+.originH{
+    font-size: 14px;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+}
+.bottom{
+    height: 50px;
+}
+.product:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.percentage{
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.perc:hover{
+    cursor: default;
+
+}
+
+.box{
+    margin-bottom: 10px;
+}
+
+.br {
+    line-height: 1px;
+}
+
+.grape{
+    margin-top: -18px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+.productInfo{
+    float: right;
+    width: 250px;
+    height: 220px;
+}
+.productInfo{
+    float: right;
+    width: 250px;
+    height: 220px;
+}
+.wineImageDiv {
+    margin-left: 10px;
+    padding-bottom: 150px;
+    width: 220px;
+    height: 220px;
+    float: left;
+}
+.productImage{
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-left: 80px;
+    height: 215px;
+    width: 55px;
+}
+.description{
+    marin-top: -10px;
+    float: right;
+    width: 480px;
+    height: 130px;
+    color:	#A9A9A9;
+}
+.price{
+    margin-left: 10px;
+    margin-top: -10px;
+    font-weight: 600;
+    font-size: 40px;
+    float: left;
+}
+#btn{
+    height: 35px;
+    float: right;
+    width: 250px;
+    background-color: 	#A7476B
+}
+#btn:hover{
+    background-color: rgb(145, 25, 71);
+}
+/* Products */
+
+/* General */
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -275px;
+    width: 520px;
+    height: 30px;
+}
+
+.displayBg {
+    background-color: rgb(145, 25, 71);
+}
+.navBar {
+    height: 80px;
+}
+.brandImage {
+    width: 15%;
+    margin-left: -20px
+}
+.displayBody {
+    background-color: rgb(145, 25, 71);
+}
+/* General */
+
+/* Search bars and Search buttons*/
+::placeholder {
+    color: #757575;
+}
+
+#searchBar2 {
+    border-radius: 12px;
+    color: black;
+    margin-left: 20px;
+    width: 400px;
+}
+#searchButton2 {
+    color: white;
+    background-color: #A7476B;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+#searchButton2:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+}
+
+input[type=submit] {
+    width: 250px;
+    padding:5px 15px;
+    background:#A7476B;
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor:pointer;
+    border-radius: 3px;
+    border-color: white;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+
+}
+
+.productButton{
+    float: right;
+    margin-top: -4px;
+}
+/* Search bars and Search buttons*/
+
+
+/* Pagination */
+.paginationhA{
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+
+}
+
+.paginationhA:hover{
+    text-decoration: none;
+}
+
+#pagination{
+    margin-left: 665px;
+    margin-right: 650px;
+}
+#firstButton {
+    color: white;
+    background-color: #A7476B;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+#firstButton:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+}
+
+#prevButton {
+    color: white;
+    background-color: #A7476B;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+#prevButton:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+}
+
+#lastButton {
+    color: white;
+    background-color: #A7476B;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+#lastButton:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+}
+
+#nextButton {
+    color: white;
+    background-color: #A7476B;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+#nextButton:hover {
+    background-color: rgb(145, 25, 71);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+}
+
+
+/* Pagination */

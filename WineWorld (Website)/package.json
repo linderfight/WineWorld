@@ -1,0 +1,16 @@
+{
+    "name": "wineworldwebsite",
+    "version": "1.0.0",
+    "description": "Price comparison website",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Momhil Galabov",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4",
+        "mysql": "^2.16.0",
+        "url": "^0.11.0"
+    }
+}

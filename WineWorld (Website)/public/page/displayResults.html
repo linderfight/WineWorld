@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+    <link rel="stylesheet" href="../css/displayProducts.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/icon.ico" />
+
+    <script src="../javascripts/vue.js"></script>
+    <script src="../javascripts/axios.min.js"></script>
+    <script src="../javascripts/redirect.js"></script>
+    <title>Wine World's products</title>
+</head>
+<body class="displayBody">
+    <nav class="navbar navbar-default navBar">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+                <img src="../images/navbarLogo.png" class="brandImage">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" id="searchBar2">
+                </div>
+                <button type="submit" class="btn btn-default" id="searchButton2" onclick="getSecondaryString()">GO</button>
+            </form>
+        </div>
+    </nav>
+    <div id="app" class="products">
+        <!-- Sort by button -->
+        <br>
+            <h1 v-if="searchString === ''">&nbsp Displaying all wines</h1>
+            <h1 v-else>&nbsp Displaying wines containing the word:
+                <h2 id="resultString"> &nbsp  {{searchString}}</h2>
+            </h1>
+        <br>
+        <hr class="outsideLine">
+        <div id="prods" class="product" v-for="wine in wines">
+            <h1 class="productTitle">{{wine.wine_title}}</h1>
+            <div class="box">
+                <div class="wineImageDiv">
+                    <img v-bind:src="wine.image_url" class="productImage">
+                </div>
+                <div class="productInfo">
+                    <img src="https://www.sundaytimeswineclub.co.uk/images/uk/en/common/icons/grapes/red-grape.png" title="Grape Type">
+                    <h4 class="grape" id="grapes">
+                        {{wine.grape_1}}<span v-if="wine.grape_2 != ''">, {{wine.grape_2}}</span><span v-if="wine.grape_3 != ''">, {{wine.grape_3}}</span>
+                    </h4>
+                    <h4 class="percentage" title="Alcohol Percentage">
+                        <span v-if="wine.alcohol_percentage != 0"><i class='fas'>&#xf043;</i>&nbsp  {{wine.alcohol_percentage}}%</span>
+                        <span v-else><i class='fas'>&#xf043;</i>&nbsp Not mentioned</span>
+                    </h4>
+                    <br class="br">
+                    <h4 class="productInfoFont"><span class="vintage">Sold by:</span> {{wine.sold_by}}</h4>
+                    <h4 class="productInfoFont" id="yearBottled">
+                        <span class="vintage" v-if="wine.year_bottled !=0">Vintage: </span><span v-if="wine.year_bottled !=0">{{wine.year_bottled}}</span>
+                        <span class="vintage" v-else>Vintage: </span><span v-else> Not mentioned</span>
+                    </h4>
+                    <h4 class="originH" id="origin">
+                        <span class="origin">Origin: </span>
+                        <span v-if="wine.area_name !=''">{{wine.area_name}}</span>
+                        <span v-if="wine.country_name !=''">{{wine.country_name}}</span>
+                    </h4>
+                </div>
+            </div>
+            <p class="description">{{wine.wine_description}}</p>
+            <hr class="splitter">
+            <div clas="bottom">
+                <h3 class="price" id="cost">
+                    <span >£{{wine.bottle_price}}</span>
+                </h3>
+                <form :action="wine.product_url" class="productButton">
+                    <input type="submit" value="Visit Website"/>
+                </form>
+            </div>
+        </div>
+        <hr id="outsideLine">
+        <br>
+        <div id="pagination">
+            <button v-on:click="firstPage" type="submit" class="btn btn-default" id="firstButton"><<</button>
+            <button v-on:click="prevPage" type="submit" class="btn btn-default" id="prevButton"><</button>
+            <a class="paginationhA">&nbsp {{pageNumber + 1}} / {{numOfPages}} &nbsp</a>
+            <button v-on:click="nextPage" type="submit" class="btn btn-default" id="nextButton">></button>
+            <button v-on:click="lastPage" type="submit" class="btn btn-default" id="lastButton">>></button>
+        </div>
+        <br>
+        <br>
+    </div>
+    <script src="../javascripts/vue_Display_Products.js"></script>
+</body>
+</html>
